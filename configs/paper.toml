@@ -1,0 +1,49 @@
+[representation]
+dataset = "CIFAR-10 training split"
+architecture = "CIFAR-stem ResNet-18 autoencoder"
+latent_dim = 128
+epochs = 50
+batch_size = 256
+optimizer = "Adam"
+learning_rate = 0.001
+reconstruction_loss = "mean squared error"
+postprocess = "dataset mean centering"
+prototype = "mean of centered, L2-normalized embeddings"
+checkpoint_sha256 = "8bf4568574185265482c9dd03e37b84350298e8bcdc4bf405c7815cb31cc79a5"
+
+[generators]
+beta = 2.5
+exact_budget = true
+geometry_seed = 0
+margin = "similarity(true class) - max similarity(wrong class)"
+
+[baselines]
+symmetric = "uniform examples; uniform wrong destinations"
+semantic2 = "two balanced predeclared destinations per CIFAR-10 class"
+idln = "Xia et al. Algorithm 2 with exact-budget weighted sampling"
+idln_rate_std = 0.1
+idln_input_scale = 255.0
+
+[budgets]
+aggregate = 4505
+random2 = 9061
+worst = 20104
+
+[victim_training]
+architecture = "CIFAR-adapted ResNet-18"
+epochs = 120
+optimizer = "SGD"
+learning_rate = 0.1
+momentum = 0.9
+weight_decay = 0.0005
+scheduler = "cosine"
+seeds = [0, 1, 2]
+
+[promix]
+epochs = 300
+batch_size = 128
+learning_rate = 0.05
+pretrain_epochs = 5
+ramp_epochs = 25
+expansion_final_epochs = 125
+seeds = [0, 1]

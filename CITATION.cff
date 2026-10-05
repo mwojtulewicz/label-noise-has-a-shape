@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "Label Noise Has a Shape: Reproducibility Code"
+type: software
+version: 0.1.0
+date-released: 2026-10-05
+license: MIT
+repository-code: "https://github.com/mwojtulewicz/label-noise-has-a-shape"
+authors:
+  - family-names: Wojtulewicz
+    given-names: Mateusz
+  - family-names: Duda
+    given-names: Piotr
+  - family-names: Rutkowski
+    given-names: Leszek
+preferred-citation:
+  type: conference-paper
+  title: "Label Noise Has a Shape: Geometry-Guided Benchmark Generation for Noisy-Label Learning"
+  authors:
+    - family-names: Wojtulewicz
+      given-names: Mateusz
+    - family-names: Duda
+      given-names: Piotr
+    - family-names: Rutkowski
+      given-names: Leszek
+  collection-title: "2026 IEEE International Conference on Data Mining Workshops (ICDMW)"
+  year: 2026

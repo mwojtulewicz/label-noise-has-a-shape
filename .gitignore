@@ -1,0 +1,15 @@
+/.venv/
+/data/
+/outputs/
+/checkpoints/
+/wandb/
+/.pytest_cache/
+/.ruff_cache/
+*.egg-info/
+*.npz
+*.npy
+*.pt
+*.pth
+*.py[cod]
+__pycache__/
+.DS_Store
